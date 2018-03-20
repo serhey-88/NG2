@@ -1,0 +1,5 @@
+<p>Name: {{product.name}}</p>
+<p>Desc: {{product.description}}</p>
+<p>Price: {{product.price}}</p>
+<p *ngIf="!product.isAvailable">Out of stock</p>
+<button (click)="onBuy()">Buy</button>

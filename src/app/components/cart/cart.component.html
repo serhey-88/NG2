@@ -1,0 +1,12 @@
+<div>
+    <h1>Cart</h1>
+    <div *ngIf="cartIsNotEmpty; then cartBlock else emptyBlock"></div>
+    <ng-template #cartBlock>
+        <ul>
+            <li *ngFor="let product of products">
+                <app-cart-item [product]="product"></app-cart-item>
+            </li>
+        </ul>
+    </ng-template>
+    <ng-template #emptyBlock>Your Cart Is Empty</ng-template>
+</div>
